@@ -51,17 +51,19 @@ endif
 ############ Linux (hidraw)
 ifeq "$(OS)" "linux"
 
-PKGS = libudev
+#PKGS = libudev 
 
-ifneq ($(wildcard $(HIDAPI_DIR)),)
-OBJS = $(HIDAPI_DIR)/linux/hid.o
-else
-PKGS += hidapi-hidraw hidapi-libusb
-endif
+#ifneq ($(wildcard $(HIDAPI_DIR)),)
+#OBJS = $(HIDAPI_DIR)/linux/hid.o
+#else
+#PKGS += hidapi-hidraw hidapi-libusb
+#endif
 
-CFLAGS += $(shell pkg-config --cflags $(PKGS))
-LIBS = $(shell pkg-config --libs $(PKGS))
-EXE=
+#CFLAGS += $(shell pkg-config --cflags $(PKGS))
+#LIBS = $(shell pkg-config --libs $(PKGS))
+#EXE=
+
+LIBS += -lhdapi-hidraw -lhidapi-libusb
 
 endif
 
