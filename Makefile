@@ -63,7 +63,7 @@ ifeq "$(OS)" "linux"
 #LIBS = $(shell pkg-config --libs $(PKGS))
 #EXE=
 
-LIBS += -lhdapi-hidraw -lhidapi-libusb
+LIBS += -lhidapi-hidraw -lhidapi-libusb
 
 endif
 
