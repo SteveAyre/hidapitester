@@ -13,7 +13,7 @@
 #include <stdbool.h>
 #include <getopt.h>
 
-#include "hidapi.h"
+#include <hidapi.h>
 
 
 #define MAX_STR 1024  // for manufacturer, product strings
